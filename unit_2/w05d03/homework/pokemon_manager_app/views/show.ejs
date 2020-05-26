@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%=data.name%></title>
+    <style>
+    body{
+      background-image: url(http://www.geocities.ws/pokemontours2/indexes/objects/pokedex1.gif);
+      background-repeat: no-repeat;
+    }
+    img{
+      position: absolute;
+      width: 260px;
+      height: 176px;
+      top: 149px;
+      left: 54px;
+      border-radius: 8px;
+    }
+    h1  {
+    position: absolute;
+    width: 240px;
+    left: 448px;
+    top: 150px;
+    text-align: center;
+    }
+    .stat {
+    position: absolute;
+    text-align: center;
+    top: 219px;
+    }
+    #height{
+      left: 537px;
+    }
+    #weight{
+      left: 628px;
+    }
+    #ID{
+      position: absolute;
+      left: 89px;
+      top: 446px;
+      width: 120px;
+      height: 55px;
+      text-align: center;
+      font-size: x-large;
+      padding: 13px 0 0 0;
+    }
+    </style>
+  </head>
+  <body>
+    <h1><%=data.name%></h1>
+    <img src="<%=data.img%>" alt="">
+    <div class="stat" id="height">
+      <%=data.moves.misc.height%>
+    </div>
+    <div class="stat" id="weight">
+      <%=data.moves.misc.weight%> lbs
+    </div>
+    <div id="ID">
+      ID # <%=data.id%>
+    </div>
+  </body>
+</html>

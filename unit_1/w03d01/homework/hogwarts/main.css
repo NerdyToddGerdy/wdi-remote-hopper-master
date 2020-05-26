@@ -1,0 +1,26 @@
+body{
+text-align: center;
+
+
+}
+.secret{
+  opacity: 0.5;
+}
+ul{
+  padding:0;
+}
+
+li{
+  list-style: none;
+}
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+table{
+  border:gray 1px solid;
+}
+
+.cabbage{
+  color:chartreuse;
+}

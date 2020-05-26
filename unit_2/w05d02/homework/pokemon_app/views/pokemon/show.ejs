@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <style type="text/css">
+      body {
+        font-family: 'Press Start 2P', cursive;
+        background-color: blanchedalmond;
+        text-align: center;
+      }
+      img{
+        border-radius: 10%;
+      }
+      #logo{
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="logo" src="https://4.bp.blogspot.com/-EEVKSr0sdCQ/V4PHW128AHI/AAAAAAAAAgI/pr9PquB1LUUgDsZHnnFGOVkfWf7Q57kkgCLcB/s1600/Gotta_catch_them_all.png" alt="">
+    <h2>This is <%=allPokemon.name%></h2>
+    <img src="<%=allPokemon.img%>" alt=""/>
+  </br>
+    <a href="http://localhost:3000/pokemon/">back</a>
+  </body>
+</html>

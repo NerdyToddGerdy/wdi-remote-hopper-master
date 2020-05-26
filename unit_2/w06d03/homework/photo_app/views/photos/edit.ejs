@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/photos">Photos Index</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h2>Photo Attributes:</h2>
+			<form action="/photos/<%=photo._id%>?_method=PUT" method="post">
+				<textarea name="body"><%=photo.body%></textarea><br/>
+				<input type="submit" value="Update Photo"/>
+			</form>
+		</main>
+	</body>
+</html>

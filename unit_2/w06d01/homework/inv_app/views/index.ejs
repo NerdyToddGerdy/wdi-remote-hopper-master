@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background: dimgrey;
+      }
+      img{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        display: block;
+      }
+      h1 {
+        margin: auto;
+        text-align: center;
+      }
+      li{
+        width: 220px;
+        list-style: none;
+        background: cadetblue;
+        margin: 20px auto;
+        padding: 5px;
+        border-radius: 5px
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SHOP</h1>
+    <ul>
+      <% for(var i = 0; i < items.length; i++) {%>
+        <li>
+          <a href="/inventory/<%=items[i].id%>"><%=items[i].name; %></a>
+          <br/>
+          <%=items[i].description; %>
+          <br/>
+          <a href="/inventory/<%=items[i].id%>"><img src="<%=items[i].img%>" alt=""></a>
+          <br/>
+          price: $<%=items[i].price%>
+        </li>
+      <% } %>
+    </ul>
+    <a class="button" href="/inventory/new">Add a new product</a>
+  </body>
+</html>

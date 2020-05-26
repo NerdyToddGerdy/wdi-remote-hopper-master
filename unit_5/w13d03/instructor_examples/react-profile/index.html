@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script> 
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+  <script type="text/jsx">
+
+    const Main = () => {
+      return(
+        <main>
+          <h2>Ny name is Thom</h2>
+          <img src='http://lorempixel.com/100/100/'/>
+        </main>
+      )
+    }
+
+    const Header = () => {
+      return (
+       <header>
+         <h1>My Profile</h1>
+        </header>
+      )
+    }
+
+    const About = () => {
+      return(
+        <div>
+          <p>I like to code</p>
+        </div>
+      )
+    }
+
+    const Footer = () => {
+      return(
+        <small>2017</small>
+        )
+    }
+
+    const App = () => {
+      return(
+        <div>
+          <Header />
+          <Main />
+          <About />
+          <Footer />
+        </div>
+      )
+    }
+
+    ReactDOM.render(
+      <App />,
+      document.querySelector('#root')
+    )
+  </script>
+</body>
+</html>

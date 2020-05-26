@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="app.js" type="text/javascript"></script>
+   </head>
+   <body>
+      <div ng-controller="MyController as ctrl">
+         {{2+2}}
+      </div>
+      <section ng-controller="CarsController as cars">
+         {{cars.hello}}
+         <ul>
+            <h3>Car Types</h3>
+            <li ng-repeat="type in cars.types">{{type}}</li>
+         </ul>
+         <ul>
+            <h3>Car Colors</h3>
+            <li ng-repeat="color in cars.colors">{{color}}</li>
+         </ul>
+         <section ng-controller="DriversController as driver">
+            <h2>Driver's Name</h3>
+            <h3>{{driver.name}}</h3>
+            <img ng-hide="driver.isShy" ng-src="{{driver.driverImg}}" alt="">
+         </section>
+      </section>
+
+      <!-- CAESER CIPHER -->
+      
+   </body>
+</html>

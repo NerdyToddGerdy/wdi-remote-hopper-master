@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+        <% for(var i = 0; i < products.length; i++){ %>
+            <li>
+                The <a href="/products/<%=i%>"><%=products[i].name; %></a> is $ <%=products[i].price; %>
+                <% } %>
+            </li>
+        <% } %>
+    </ul>
+  </body>
+</html>

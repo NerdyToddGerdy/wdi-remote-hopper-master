@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Create an Photo</h1>
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/photos">Photos Index</a></li>
+      </ul>
+    </nav>
+    <main>
+      <form action="/photos" method="post">
+         USERNAME:
+            <select name="username">
+               <% for(var i = 0; i < users.length; i++) { %>
+                  <option value="<%=users[i].username%>"><%=users[i].username%></option>
+               <% } %>
+            </select>
+         URL: <input type='text' name="img"></textarea><br/>
+         <input type="submit" value="Publish Photo"/>
+      </form>
+    </main>
+  </body>
+</html>

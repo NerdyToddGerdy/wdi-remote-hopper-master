@@ -1,0 +1,16 @@
+
+body {
+  background-color: #BAD4D7;
+}
+header, footer {
+  background-color: #58959C;
+}
+h1, h2, h3 {
+text-align: center;
+}
+h2,body h3,p {
+  color: #2D4C4F;
+}
+header, footer ,footer h3{
+  color: #BAD4D7
+}

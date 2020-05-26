@@ -1,0 +1,64 @@
+.container{
+  width:100%;
+  max-width: 1280px;
+  min-width: 320px;
+  margin:0;
+  clear:both;
+}
+.image-column {
+  float:left;
+  width:30.8%;
+  margin-right: 3.8%;
+}
+.footer {
+  background: #F0F6F6;
+}
+
+.footer-columns {
+  float: left;
+  width: 33%;
+  height: 167px;
+  background: #f0f6f6;
+}
+
+body{
+  text-align: center;
+}
+
+header {
+  background-image: url(https://placeimg.com/640/480/nature);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 479px;
+}
+
+#nav {
+  display: inline;
+}
+
+li {
+  float: left;
+  margin: auto;
+  list-style: none;
+  width: 24%;
+}
+li a {
+  display:block;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+
+}
+
+.link {
+  width: 200px;
+  padding: 20px;
+  margin: 100px auto ;
+  text-align: center;
+  border: 2px solid black;
+  color: blue;
+}
+
+#our_story {
+  width: 55%;
+}

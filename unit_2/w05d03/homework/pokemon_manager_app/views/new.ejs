@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Let's Add a New Pokemon</title>
+    <style>
+      input{
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/data" method="POST">
+      Name: <input type="text" name="name">
+      img: <input type="text" name="img">
+      <h3>stats</h3>
+      height: <input type="text" name="hp">
+      weight: <input type="text" name="attack">
+      ID: <input type="text" name="defense">
+      <input type="submit" value="Add to Pokedex">
+    </form>
+  </body>
+</html>

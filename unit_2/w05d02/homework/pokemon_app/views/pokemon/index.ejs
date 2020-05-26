@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <style type="text/css">
+      body {
+        background-image: url(http://68.media.tumblr.com/b0a6eb8978a1f5d109a5d19bbd8959c0/tumblr_inline_mr7tgxxELQ1qz4rgp.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        text-align: center;
+        font-family: 'Press Start 2P', cursive;
+      }
+      li {
+        padding-top: 10px;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>See All The Pokemon!</h1>
+    <ul>
+      <% for(var i = 0; i < allPokemon.length; i++) { %>
+        <li><a href='/pokemon/<%=i%>'><%=allPokemon[i].name%></a></li>
+      <% } %>
+    </ul>
+  </body>
+</html>

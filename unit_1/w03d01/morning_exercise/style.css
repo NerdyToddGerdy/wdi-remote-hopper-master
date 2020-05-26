@@ -1,0 +1,21 @@
+div{
+  display: inline-flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+#A {
+  /*display: flex;*/
+  background-color: red;
+}
+.B {
+  /*display: flex;*/
+  background-color: green;
+}
+.C {
+  /*display: flex;*/
+  background-color: blue;
+}
+.D {
+  /*display: flex;*/
+  background-color: yellow;
+}

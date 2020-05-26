@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="app.js" type="text/javascript"></script>
+   </head>
+   <body>
+      <section ng-controller="Encrypting as encrypt">
+         <div class="header">
+            <h2>CAESAR CIPHER</h2>
+         </div>
+         <div class="encode">
+            <h3>ENCODE</h3>
+            <form>
+
+            <div class="type">
+               <h4>Original</h4>
+               <textarea ng-model="encrypt.input" ng-keyup="encrypt.encrypt()" rows="8" cols="80"></textarea>
+            </div>
+            <div class="response">
+               <h4>Encrypted</h4>
+               {{encrypt.output}}
+            </div>
+         </form>
+         </div>
+         <div class="decode">
+            <h3>DECODE</h3>
+            <form class="" action="index.html" method="post">
+               <div class="type">
+                  <h4>Encrypted</h4>
+                  <textarea ng-model="encrypt.decryptInput" ng-keyup="encrypt.decrypt()" rows="8" cols="80"></textarea>
+               </div>
+               <div class="response">
+                  <h4>Original</h4>
+                  {{encrypt.decryptOutput}}
+               </div>
+            </form>
+         </div>
+      </section>
+   </body>
+</html>

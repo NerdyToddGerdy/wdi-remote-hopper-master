@@ -1,0 +1,27 @@
+body{
+}
+
+#sailboat{
+  position:absolute;
+}
+h1 {
+  position: absolute;
+  margin:623px 44% 0 44%;
+  color: white;
+  font-family: sans-serif;
+  font-size: 80px;
+}
+li{
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  display: flex;
+
+}
+ul{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: black;
+  padding: 40px;
+}

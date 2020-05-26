@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>index of my games</h1>
+    <% for(i=0; i < games.length;i++){ %>
+      <li><a href="/games/<%=i%>"><%= games[i].name %></a>
+
+      </li>
+        <form action="/games/<%=i; %>?_method=DELETE" method="POST">
+          <input type="submit" value="Remove game from inventory">
+          <a href="/games/<%=i%>/edit">Edit this game</a>
+        </form>
+    <% } %>
+    <a href="/games/new">Add a new game</a>
+  </body>
+</html>

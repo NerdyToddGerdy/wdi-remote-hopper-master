@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background: url('http://gran4u.xtgem.com/Pokedex.png');
+        background-repeat: no-repeat;
+      }
+      .screen{
+        width: 330px;
+        height: 335px;
+        position: absolute;
+        left: 30px;
+        top: 154px;
+        overflow-x: scroll;
+      }
+      img{
+        width: 40px;
+        height: 40px;
+        border: blue solid;
+        box-shadow: 2px 3px black;
+      }
+      .header{
+        width: 300px;
+        height: 373px;
+        text-align: center;
+        font-size: 4em;
+        left: 464px;
+        position: absolute;
+        top: 159px;
+        border-radius: 7px;
+      }
+      .new-button{
+        width: 26px;
+        height: 28px;
+        position: absolute;
+        top: 500px;
+        left: 65px;
+        border-radius: 15px;
+      }
+      h3{
+        position: absolute;
+        top: 485px;
+        left: 96px;
+      }
+        </style>
+      </head>
+  <body>
+    <div class="screen">
+      <ul>
+        <% for (i=0; i < theFirst151.length; i++){ %>
+        <a href="/pokedex/<%=i%>"><img src="<%=theFirst151[i].img%>" alt="<%=theFirst151[i].name%>"></a>
+        <%}%>
+      </ul>
+    </div>
+    <div class="header">
+      Please Choose a Pokemon to view.
+    </div>
+
+      <a class="new-button" href="/pokedex/new"></a>
+
+    <h3> Click Here To Add</h3>
+  </body>
+</html>

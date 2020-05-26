@@ -1,0 +1,28 @@
+header, div, main, nav, aside, footer {
+   border: 1px solid red;
+}
+
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+@media (min-width: 768px){
+
+   nav, aside {
+      flex: 0 0 12em;
+   }
+   
+   .container {
+      display: flex;
+      flex: 1;
+   }
+}
+main {
+   flex: 1;
+}
+
+nav {
+   order: -1;
+}

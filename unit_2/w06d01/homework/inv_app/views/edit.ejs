@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background: dimgrey;
+      }
+      img{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        display: block;
+      }
+      h1 {
+        margin: auto;
+        text-align: center;
+      }
+      li{
+        width: 220px;
+        list-style: none;
+        background: cadetblue;
+        margin: 20px auto;
+        padding: 5px;
+        border-radius: 5px
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Edit an item in your inventory</h1>
+    <form class="" action="/inventory/<%=items.id;%>?_method=PUT" method="post">
+      Name: <input type="text" name="name" value="<%=items.name%>">
+      <br/>
+      Description: <input type="text" name="description" value="<%=items.description%>">
+      <br/>
+      Image: <input type="text" name="img" value="<%=items.img%>">
+      <br/>
+      Price: <input type="text" name="price" value="<%=items.price%>">
+      <br/>
+      Quantity: <input type="text" name="qty" value="<%=items.qty%>">
+      <br/>
+      <input type="submit" name="" value="Adjust Item">
+    </form>
+  </body>
+</html>

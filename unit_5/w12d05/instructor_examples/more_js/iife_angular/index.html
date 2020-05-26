@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script src="controller1.js"></script>
+  <script src="controller2.js"></script>
+</head>
+<body>
+  hello
+  <div ng-controller='MainController as ctrl'>
+    {{ ctrl.message }}
+  </div>
+  
+  <div ng-controller='AuthController as auth'>
+    {{ auth.message }}
+  </div>
+
+</body>
+</html>

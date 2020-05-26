@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+   <head>
+      <meta charset="utf-8">
+      <title>TO DO</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="app.js" charset="utf-8"></script>
+   </head>
+   <body ng-controller="MyController as ctrl">
+      {{ctrl.title}} not inside div
+      <div ng-bind="ctrl.title"></div>
+      <ul>
+         <li ng-repeat="item in ctrl.items track by $index">
+            {{item}}
+            <div ng-click="ctrl.remove($index)">
+               Delete Me
+            </div>
+         </li>
+
+      </ul>
+      <form ng-submit="ctrl.handleSubmit()">
+         <input ng-model="ctrl.someProperty">
+         <input type="submit" value="Submit new task">
+      </form>
+   </body>
+</html>

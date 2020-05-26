@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Here be the dragons now</title>
+  <style media="screen">
+  li {
+    display: inline;
+    list-style: none;
+  }
+  img {
+    width: 90px;
+    height: 90px;
+    border: blue solid 4px;
+    margin: 7px;
+    box-shadow: 6px 8px black;
+  }
+  body{
+    background-color: lemonchiffon;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Which Pokemon do you want to learn about?</h1>
+    <ul>
+      <% for(var i=0; i < data.length; i++){ %>
+        <li>
+          <a href="/data/<%=i%>"><img src="<%=data[i].img; %>" alt=""/></a>
+        </li>
+      <% } %>
+    </ul>
+    <a href="/data/new">Add a new Pokemon</a>
+  </body>
+</html>

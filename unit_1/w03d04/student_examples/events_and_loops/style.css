@@ -1,0 +1,15 @@
+body{
+  background-color: green;
+}
+.square {
+  background-color: ivory;
+  height: 1vw;
+  width: 1vw;
+  display: inline-block;
+  /*temporary border*/
+  border: 1px solid grey;
+  margin-bottom: 0px;
+}
+.pink {
+  background-color: hotPink;
+}

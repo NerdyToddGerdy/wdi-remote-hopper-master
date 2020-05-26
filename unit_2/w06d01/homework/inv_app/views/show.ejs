@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%=items.name%></title>
+    <style media="screen">
+      body{
+        background: dimgrey;
+      }
+      img{
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border-radius: 5px
+      }
+      h1 {
+        margin: auto;
+        text-align: center;
+      }
+      li{
+        width: 220px;
+        list-style: none;
+        background: cadetblue;
+        margin: 20px auto;
+        padding: 5px;
+        border-radius: 5px
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      div{
+        width: 400px;
+        text-align: center;
+        margin: auto;
+        background-color: cornsilk;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%=items.name%></h1>
+    <img src="<%=items.img%>" alt="">
+    <br/>
+    <div>
+    number still in stock:
+    <% if( items.qty < 1){ %>
+        OUT OF STOCK
+      <% } else { %>
+        <%=items.qty%>
+        <!-- DELETE BUTTON -->
+        <form class="" action="/inventory/<%=items.id;%>/buy?_method=PUT" method="POST">
+          <input type="submit" name="" value="BUY">
+        </form>
+
+      <% } %>
+      <br/>
+
+
+    <a href="/inventory/<%=items.id%>/edit">Edit this page</a><br/>
+    <a href="/inventory">Back to main page</a>
+
+    <form class="" action="/inventory/<%=items.id;%>?_method=DELETE" method="POST">
+      <input type="submit" name="" value="Delete this item">
+    </div>
+    </form>
+  </body>
+</html>

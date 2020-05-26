@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>These are what we call photos</h1>
+    <a href="/photos/new">Go ahead add what you got</a> <br/>
+    <a href="/users">See Who done it</a>
+    <ul>
+      <% for(i = 0; i < photos.length; i++){ %>
+        <li>
+         <a href="/photos/<%=photos[i].id%>"> <img src="<%=photos[i].img%>" alt=""></a>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>

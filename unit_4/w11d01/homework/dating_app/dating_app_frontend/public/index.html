@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="dating_app">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" charset="utf-8"></script>
+      <script src="app.js" charset="utf-8"></script>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body ng-controller="mainController as ctrl">
+      <header>
+         Dating App Header
+      </header>
+      <div class="container">
+         <main>
+            main content goes here
+
+         </main>
+         <nav >
+            <div ng-repeat="user in ctrl.firstThree">
+               <img src="{{user.img}}" alt="">
+               <p>{{user.name}}</p>
+               <p>{{user.age}}</p>
+               <p>{{user.gender}}</p>
+            </div>
+         </nav>
+         <aside>
+            <div ng-repeat="user in ctrl.secondThree">
+               <img src="{{user.img}}" alt="">
+               <p>{{user.name}}</p>
+               <p>{{user.age}}</p>
+               <p>{{user.gender}}</p>
+            </div>
+         </aside>
+      </div>
+      <footer>
+         <h3>Add a Dater</h3>
+         <form ng-submit="ctrl.processForm()">
+            <input type="text" ng-model="ctrl.formdata.name" placeholder="name">
+            <input type="text" ng-model="ctrl.formdata.age" placeholder="age">
+            <input type="text" ng-model="ctrl.formdata.gender" placeholder="gender">
+            <input type="text" ng-model="ctrl.formdata.img" placeholder="img">
+            <input type="submit">
+         </form>
+      </footer>
+   </body>
+</html>

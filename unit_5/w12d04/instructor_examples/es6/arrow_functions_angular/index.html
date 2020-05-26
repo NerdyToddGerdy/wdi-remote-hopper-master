@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 Angular</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MainController as ctrl">
+  {{ ctrl.message }} 
+  <div ng-repeat="repo in ctrl.APIResult">
+    <h2>{{repo.name}}</h2>
+  </div>
+</body>
+</html>

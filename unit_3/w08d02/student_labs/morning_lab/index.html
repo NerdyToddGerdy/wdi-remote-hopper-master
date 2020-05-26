@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="movieSearch">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="app.js" charset="utf-8"></script>
+   </head>
+   <body ng-controller="movieSearchController as msc">
+      <form ng-submit='msc.find()'>
+         <input ng-model='msc.inputData'>
+         <input type="submit" value="Here is a button">
+      </form>
+      <li ng-repeat="result in msc.foundTitles">{{result.Title}}</li>
+   </body>
+</html>

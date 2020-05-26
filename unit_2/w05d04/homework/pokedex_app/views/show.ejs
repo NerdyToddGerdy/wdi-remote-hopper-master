@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background: url('http://www.geocities.ws/pokemontours2/indexes/objects/pokedex1.gif') no-repeat;
+      }
+      img{
+        position: absolute;
+        left: 54px;
+        top: 150px;
+        width: 256px;
+        height: 171px;
+        border-radius: 11px;
+      }
+      .name{
+        width: 240px;
+        position: absolute;
+        left: 448px;
+        top: 142px;
+        text-align: center;
+      }
+      #ID{
+        width: 120px;
+        top: 426px;
+        position: absolute;
+        left: 89px;
+        text-align: center;
+        height: 25px;
+        padding: 15px 0px;
+      }
+      #height{
+        /*background: pink;*/
+        width: 120px;
+        position: absolute;
+        left: 449px;
+        top: 222px;
+        text-align: center;
+      }
+      #weight{
+        /*background: pink;*/
+        width: 120px;
+        position: absolute;
+        left: 569px;
+        top: 222px;
+        text-align: center;
+      }
+      #delete{
+        position: absolute;
+        border: none;
+        top: 453px;
+        left: 453px;
+        width: 104px;
+        height: 46px;
+        border-radius: 4px;
+        background: none;
+        cursor: pointer;
+      }
+      #edit{
+        position: absolute;
+        top: 453px;
+        left: 579px;
+        width: 104px;
+        border-radius: 4px;
+        font: 11px system-ui;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        padding: 17px 0;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="">
+      <img src="<%=theFirst151.img;%>" alt="<%=theFirst151.name;%>">
+      <h1 class="name">
+        <%=theFirst151.name; %>
+      </h1>
+      <h2 id="ID">I.D.# <%=theFirst151.id%></h2>
+      <h3 id="height">
+        <% if (theFirst151.height){ %>
+          <%=theFirst151.height%>
+        <% } else {%>
+          <%=theFirst151.misc.height %>
+          <% } %>
+      </h3>
+      <h3 id="weight">
+        <% if (theFirst151.weight){ %>
+          <%=theFirst151.weight%>
+        <% } else {%>
+          <%=theFirst151.misc.weight %>
+          <% } %>
+      </h3>
+      <form class="" action="/pokedex/<%=thisPokemon%>?_method=DELETE" method="POST">
+        <input id="delete" type="submit" value="DELETE">
+      </form>
+      <a id="edit" href="/pokedex/thisPokemon/edit">EDIT</a>
+  </body>
+</html>

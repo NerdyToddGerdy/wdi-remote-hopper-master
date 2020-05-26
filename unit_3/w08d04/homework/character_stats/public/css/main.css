@@ -1,0 +1,21 @@
+body{
+   background: url(https://i.imgur.com/XYzC7mz.png);
+}
+
+h1{
+   text-align: center;
+   color: burlywood;
+}
+
+li.ng-scope {
+    background: url(http://www.myfreetextures.com/wp-content/uploads/2013/07/old-brown-vintage-parchment-paper-texture.jpg);
+    width: 200px;
+    margin: 3%;
+    box-shadow: 5px 5px 12px black;
+   list-style: none;
+}
+ul.chars {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}

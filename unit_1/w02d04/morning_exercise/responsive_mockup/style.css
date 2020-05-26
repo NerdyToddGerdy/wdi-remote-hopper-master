@@ -1,0 +1,27 @@
+@@media (min-width: 1024) {
+  #A {
+    width:96%;
+    background: red;
+    text-align: center;
+    padding: 16% 1% 16% 1%;
+    font-size: 3em;
+    margin:1%;
+  }
+  #B {
+    min-width: 480px;
+    float:left;
+    width: 62% ;
+    background: blue;
+    text-align: center;
+    padding: 16% 1% 16% 1%;
+    font-size: 3em;
+    margin: 1%;
+  }
+  #C {
+    background: green;
+    text-align: center;
+    padding: 16% 1% 16% 1%;
+    font-size: 3em;
+    margin:1%
+  }
+}

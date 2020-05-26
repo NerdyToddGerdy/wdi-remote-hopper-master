@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="CharacterApp">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+      <script src="/js/app.js" charset="utf-8"></script>
+      <link rel="stylesheet" href="/css/main.css">
+   </head>
+   <body ng-controller="MainController as main">
+      <h1>Here are the characters</h1>
+      <ul class="chars">
+         <li ng-repeat="char in main.characters" ng-click="main.showEdit(char._id)">
+            <ul ng-if="main.editableCharId !== char._id">
+               <h3>{{char.name}}</h3>
+               <li>Race: {{char.race}}</li>
+               <li>Health Points: {{char.hp}}</li>
+               <li>Magic Points: {{char.mp}}</li>
+               <li>Experience Points: {{char.xp}}</li>
+            </ul>
+            <form ng-submit = "main.updateChar(char)" ng-if="main.editableCharId == char._id">
+               <input type="text" ng-model="char.name" placeholder="Name"><br/>
+               <input type="text" ng-model="char.race" placeholder="Race"><br/>
+               <input type="number" ng-model="char.hp" min="1" placeholder="Current Max Health"><br/>
+               <input type="number" ng-model="char.mp" min="1" placeholder="Current Max Magic"><br/>
+               <input type="number" ng-model="char.xp" min="1" placeholder="Current Experience"><br/>
+               <input type="submit" value="Update Your Character">
+            </form>
+            <button ng-click="main.deleteChar(char._id)">X</button>
+         </li>
+      </ul>
+      <form ng-submit = "main.addChar()">
+         <input type="text" ng-model="main.name" placeholder="Name"><br/>
+         <input type="text" ng-model="main.race" placeholder="Race"><br/>
+         <input type="number" ng-model="main.hp" min="1" placeholder="Current Max Health"><br/>
+         <input type="number" ng-model="main.mp" min="1" placeholder="Current Max Magic"><br/>
+         <input type="number" ng-model="main.xp" min="1" placeholder="Current Experience"><br/>
+         <input type="submit" value="Create Your Character">
+      </form>
+   </body>
+</html>

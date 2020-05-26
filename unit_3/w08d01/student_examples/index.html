@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="app.js" charset="utf-8"></script>+
+      <style media="screen">
+         .active{
+            background:red;
+         }
+      </style>
+   </head>
+   <body ng-controller="MyController as ctrl">
+      {{ctrl.hello}}
+      <div ng-bind="ctrl.hello"></div>
+      <section ng-class="(ctrl.isActive)?'active':''">dummy</section>
+      <ul>
+         <li ng-repeat="item in ctrl.items">{{item}}</li>
+      </ul>
+      <div ng-if="ctrl.divExists">
+         Remove
+      </div>
+      <div ng-hide="ctrl.hideGiv">Hide Me</div>
+      <div ng-show="ctrl.showDiv">Show Me</div>
+      <img ng-src="{{ctrl.imgSrc}}">
+      {{ctrl.someProperty}}<br>
+      <form ng-submit="ctrl.handleSubmit()">
+         <input ng-model="ctrl.someProperty"/><br>
+         <input type="submit" value="Submit the Form">
+      </form>
+      <div ng-click="ctrl.someAction()">Click Me</div>
+   </body>
+</html>

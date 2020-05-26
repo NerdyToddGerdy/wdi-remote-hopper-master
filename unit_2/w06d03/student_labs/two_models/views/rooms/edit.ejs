@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1>Edit <%=room.name%>'s Info</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/rooms">Rooms Index</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h2>Room Attributes:</h2>
+			<form action="/rooms/<%=room._id%>?_method=PUT" method="post">
+				<input type="text" name="name" value="<%=room.name%>"/><br/>
+				<input type="submit" value="Update Room"/>
+			</form>
+		</main>
+	</body>
+</html>

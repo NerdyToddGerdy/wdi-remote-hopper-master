@@ -1,0 +1,123 @@
+/********************************** General
+*********************************/
+body {
+  background-color: snow;
+  font-size: .7em;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color:  #212F3C;
+  margin: auto;
+  border-radius: 2%;
+  border: 5px dotted black;
+}
+
+.wrapper {
+    background-color:  #212F3C;
+    margin: auto;
+    width: 95%;
+    height: 95%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/********************************** Newspaper details
+*********************************/
+h1, h3 {
+  display: inline-block;
+}
+
+h1 {
+  font-family: 'Fascinate Inline', cursive;
+}
+
+h3 {
+  max-width: 15%;
+  border: 1px solid black;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: .95em;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+}
+
+h2 {
+  text-align: center;
+  margin: 2px;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+  text-align: justify;
+}
+
+p:first-child:first-letter {
+  color: red;
+}
+
+/********************************** Add animations here
+*********************************/
+.newspaper {
+  background-color:ivory;
+  border-radius: 5% 5% 1% 1%;
+  width: 50%;
+  transform-origin: center;
+  animation: spin .3s 10 linear;
+  animation-iteration-count: 10;
+  padding: 10px 30px;
+  max-height: 200px;
+  overflow: scroll;
+  box-shadow: 2px 2px 4px black, -2px -2px 4px black;
+  position: relative;
+}
+
+.size-in {
+  transform: scale(1);
+  animation: size-in 3s 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+@keyframes spin{
+  /*0% {transform: rotate(18deg);}
+  5% {transform: rotate(36deg);}
+  10% {transform: rotate(54deg);}
+  15% {transform: rotate(72deg);}
+  20% {transform: rotate(90deg);}
+  25% {transform: rotate(108deg);}
+  30% {transform: rotate(126deg);}
+  35% {transform: rotate(144deg);}
+  40% {transform: rotate(162deg);}
+  45% {transform: rotate(180deg);}
+  50% {transform: rotate(198deg);}
+  55% {transform: rotate(216deg);}
+  60% {transform: rotate(234deg);}
+  65% {transform: rotate(252deg);}
+  70% {transform: rotate(270deg);}
+  75% {transform: rotate(288deg);}
+  80% {transform: rotate(306deg);}
+  85% {transform: rotate(324deg);}
+  90% {transform: rotate(342deg);}
+  95% {transform: rotate(360deg);}
+  100% {transform: rotate(0deg);}*/
+  from {transform:rotate(0deg); ease-out}
+   to {transform:rotate(3600deg);}
+   bounceIn{}
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Here be dragons</h1>
+    <ul>
+      <% for(var i = 0; i < games.length; i++) {%>
+      <li>
+        <a href="/games/<%=games[i].id;%>"><%=games[i].name;%></a> is a game that is <%=games[i].system;%>
+      </li>
+      <form action="/games/<%=games[i].id;%>?_method=DELETE" method="POST">
+        <input type="submit" name="" value="Delete This Game">
+      </form>
+      <a href="/games/<%=games[i].id%>/edit">Edit this page</a>
+      <% } %>
+    </ul>
+    <a href="/games/new">Add a Game</a>
+  </body>
+</html>

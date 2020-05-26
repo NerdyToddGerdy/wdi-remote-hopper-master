@@ -1,0 +1,14 @@
+.square {
+  border: 1px solid grey;
+  float: left;
+  width: 12vw; height: 12vw;
+  background-color: red;
+}
+.container{
+  display: inline-flex;
+  float;left:
+  width: auto;
+  height: auto;
+  background-color: blue;
+  margin-top: -4px;
+}
